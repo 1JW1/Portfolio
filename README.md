@@ -26,7 +26,12 @@ A responsive personal portfolio website showcasing my front-end development skil
 git clone https://github.com/1JW1/Portfolio.git
 ```
 
-2. Open `index.html` in your preferred browser
+2. Navigate to the project directory and run the local server:
+```bash
+cd Portfolio && npx serve
+```
+
+This will start a local development server and provide you with a URL to view the portfolio (typically http://localhost:3000).
 
 ## 🎨 Theme Customization
 
