@@ -4,12 +4,12 @@ A responsive personal portfolio website showcasing my front-end development skil
 
 ## 🚀 Features
 
+- Cal.com integration for automated meeting scheduling
 - Responsive design that works across all devices
 - Theme switcher with 4 different color schemes (Blue, Light, Green, Purple)
 - Persistent theme selection using localStorage
 - Project showcase section
 - Skills & Technologies section
-- Contact information
 
 ## 💻 Technologies Used
 
@@ -17,6 +17,7 @@ A responsive personal portfolio website showcasing my front-end development skil
 - CSS3
 - JavaScript (Vanilla)
 - Local Storage API
+- Cal.com API
 
 ## 🛠️ Setup & Installation
 
