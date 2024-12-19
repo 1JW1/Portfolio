@@ -1,38 +1,21 @@
-let theme = localStorage.getItem('theme')
-
-if(theme == null){
-	setTheme('blue')
-}else{
-	setTheme(theme)
+const themeStyles = {
+	blue: 'src/styles/default.css',
+	light: 'src/styles/light.css',
+	green: 'src/styles/green.css',
+	purple: 'src/styles/purple.css'
 }
 
-let themeDots = document.getElementsByClassName('theme-dot')
+const currentTheme = localStorage.getItem('theme') || 'blue'
+setTheme(currentTheme)
 
-
-for (var i=0; themeDots.length > i; i++){
-	themeDots[i].addEventListener('click', function(){
-		let mode = this.dataset.mode
-		console.log('Option clicked:', mode)
+Array.from(document.getElementsByClassName('theme-dot')).forEach(dot => {
+	dot.addEventListener('click', () => {
+		const mode = dot.dataset.mode
 		setTheme(mode)
 	})
-}
+})
 
-function setTheme(mode){
-		if(mode == 'blue'){
-			document.getElementById('theme-style').href = 'src/styles/default.css'
-	}
-
-	if(mode == 'light'){
-		document.getElementById('theme-style').href = 'src/styles/light.css'
-	}
-
-	if(mode == 'green'){
-		document.getElementById('theme-style').href = 'src/styles/green.css'
-	}
-
-	if(mode == 'purple'){
-		document.getElementById('theme-style').href = 'src/styles/purple.css'
-	}
-
+function setTheme(mode) {
+	document.getElementById('theme-style').href = themeStyles[mode]
 	localStorage.setItem('theme', mode)
 }
